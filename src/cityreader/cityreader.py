@@ -22,6 +22,9 @@ class City():
     self.lat = lat
     self.lon = lon
 
+  def __repr__(self):
+    return f"City('{self.name}', {self.lat},{self.lon})"
+
 import csv
 def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
@@ -42,8 +45,8 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(f'{c.name}, {c.lat}, {c.lon}')
-# c = [i.name for i in cities]
+    print(c)
+# c = [City(i.name, i.lat, i.lon) for i in cities]
 # print(c)
 
 # STRETCH GOAL!
